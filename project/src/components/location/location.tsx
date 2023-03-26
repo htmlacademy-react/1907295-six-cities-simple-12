@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 
-function Location (): JSX.Element {
+export default function Location (): JSX.Element {
   return (
     <main className="page__main page__main--index page__main--index-empty">
       <h1 className="visually-hidden">Cities</h1>
@@ -54,5 +54,3 @@ function Location (): JSX.Element {
     </main>
   );
 }
-
-export default Location;

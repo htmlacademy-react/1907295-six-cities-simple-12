@@ -1,13 +1,15 @@
 import {Helmet} from 'react-helmet-async';
 import {Link} from 'react-router-dom';
 import Header from '../../components/header/header';
-import PlaceCard from '../../components/place-card/place-card';
+import ListCard from '../../components/card-list/card-list';
+import {Offers} from '../../types/offers';
 
 type MainPageProps = {
   placesCount: number;
+  placesCard: Offers
 }
 
-function MainPage ({placesCount}: MainPageProps): JSX.Element {
+function MainPage ({placesCount, placesCard}: MainPageProps): JSX.Element {
   return (
     <>
       <Header />
@@ -73,15 +75,7 @@ function MainPage ({placesCount}: MainPageProps): JSX.Element {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-                <PlaceCard />
-
-                <PlaceCard />
-
-                <PlaceCard />
-
-                <PlaceCard />
-
-                <PlaceCard />
+                <ListCard offers={placesCard} />
               </div>
             </section>
             <div className="cities__right-section">

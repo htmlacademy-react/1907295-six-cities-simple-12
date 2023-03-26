@@ -6,19 +6,26 @@ import LoginPage from '../../pages/login-page/login-page';
 import RoomPage from '../../pages/room-page/room-page';
 import ErrorPage from '../../pages/error-page/error-page';
 import PrivateRoute from '../private-route/private-route';
+import {Offers} from '../../types/offers';
 
 type AppMainProps = {
   placesCount: number;
-};
+  placesCard: Offers;
+}
 
-function App({placesCount}: AppMainProps): JSX.Element {
+function App({placesCount, placesCard}: AppMainProps): JSX.Element {
   return (
     <HelmetProvider>
       <BrowserRouter>
         <Routes>
           <Route
             path={AppRoute.Main}
-            element={<MainPage placesCount={placesCount} />}
+            element={
+              <MainPage
+                placesCount={placesCount}
+                placesCard={placesCard}
+              />
+            }
           />
           <Route
             path={AppRoute.Login}
@@ -30,7 +37,7 @@ function App({placesCount}: AppMainProps): JSX.Element {
           />
           <Route
             path={AppRoute.Room}
-            element={<RoomPage />}
+            element={<RoomPage placesCard={placesCard}/>}
           />
           <Route
             path='*'

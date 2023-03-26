@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/app/app';
+import {placesCard} from './mocks/offers';
 
 const Setting = {
   PlacesCount: 312,
+  PlacesCard: placesCard
 } as const;
 
 const root = ReactDOM.createRoot(
@@ -14,6 +16,7 @@ root.render(
   <React.StrictMode>
     <App
       placesCount={Setting.PlacesCount}
+      placesCard={Setting.PlacesCard}
     />
   </React.StrictMode>,
 );
