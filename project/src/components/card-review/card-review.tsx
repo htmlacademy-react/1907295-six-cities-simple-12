@@ -18,7 +18,7 @@ export default function ReviewCard (): JSX.Element {
   const fieldChangeHandler = (evt: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>): void => {
     const {name, value} = evt.target;
     setformReview({...formReview, [name]:value});
-  }
+  };
 
   return (
     <form className="reviews__form form" action="#" method="post">

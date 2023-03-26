@@ -6,7 +6,7 @@ import {Offers} from '../../types/offers';
 
 type MainPageProps = {
   placesCount: number;
-  placesCard: Offers
+  placesCard: Offers;
 }
 
 function MainPage ({placesCount, placesCard}: MainPageProps): JSX.Element {

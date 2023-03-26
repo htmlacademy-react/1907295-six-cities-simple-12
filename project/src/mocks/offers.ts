@@ -28,14 +28,14 @@ export const placesCard: Offers = [
       avatarUrl: 'img/avatar-angelina.jpg',
       id: 3,
       isPro: true,
-      name: "Angelina"
+      name: 'Angelina'
     },
     id: 1,
     images: ['img/apartment-01.jpg'],
     isPremium: false,
     location: {
-      latitude: 52.35514938496378,
-      longitude: 4.6738775374999488,
+      latitude: 52.370216,
+      longitude: 4.895168,
       zoom: 8
     },
     maxAdults: 4,
@@ -72,14 +72,14 @@ export const placesCard: Offers = [
       avatarUrl: 'img/avatar-angelina.jpg',
       id: 3,
       isPro: true,
-      name: "Angelina"
+      name: 'Angelina'
     },
     id: 2,
     images: ['img/apartment-02.jpg'],
     isPremium: false,
     location: {
-      latitude: 52.35514938496378,
-      longitude: 4.6738775374999488,
+      latitude: 52.370216,
+      longitude: 4.895168,
       zoom: 8
     },
     maxAdults: 4,
@@ -116,14 +116,14 @@ export const placesCard: Offers = [
       avatarUrl: 'img/avatar-max.jpg',
       id: 1,
       isPro: true,
-      name: "Maxim"
+      name: 'Maxim'
     },
     id: 3,
     images: ['img/apartment-03.jpg'],
     isPremium: false,
     location: {
-      latitude: 52.35514938496378,
-      longitude: 4.6738775374999488,
+      latitude: 52.370216,
+      longitude: 4.895168,
       zoom: 8
     },
     maxAdults: 4,
@@ -160,14 +160,14 @@ export const placesCard: Offers = [
       avatarUrl: 'img/avatar-max.jpg',
       id: 1,
       isPro: true,
-      name: "Maxim"
+      name: 'Maxim'
     },
     id: 4,
     images: ['img/apartment-01.jpg'],
     isPremium: false,
     location: {
-      latitude: 52.35514938496378,
-      longitude: 4.6738775374999488,
+      latitude: 52.370216,
+      longitude: 4.895168,
       zoom: 8
     },
     maxAdults: 4,
@@ -177,4 +177,4 @@ export const placesCard: Offers = [
     title: 'Beautiful & luxurious studio at great location',
     type: 'apartment'
   },
-]
+];

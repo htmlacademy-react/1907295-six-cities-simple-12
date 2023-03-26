@@ -4,7 +4,7 @@ import {Offer} from '../../types/offers';
 type OfferCardProps = {
   offer: Offer;
   onMouseOverHandler: (id: number) => void;
-  activeId: number
+  activeId: number;
 };
 
 export default function OfferCard ({offer, onMouseOverHandler, activeId}: OfferCardProps): JSX.Element {
@@ -17,8 +17,7 @@ export default function OfferCard ({offer, onMouseOverHandler, activeId}: OfferC
         <div className="place-card__mark">
           <span>Premium</span>
         </div>
-      ) : ("")
-      }
+      ) : ('')}
       <div className="cities__image-wrapper place-card__image-wrapper">
         <Link to={`/offer/${id}`}>
           <img className="place-card__image" src={images[0]} width="260" height="200" alt="Place image"/>
