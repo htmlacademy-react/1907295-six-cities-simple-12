@@ -37,7 +37,8 @@ function App({placesCount, placesCard}: AppMainProps): JSX.Element {
           />
           <Route
             path={AppRoute.Room}
-            element={<RoomPage placesCard={placesCard}/>}
+            // element={<RoomPage placesCard={placesCard}/>}
+            element={<RoomPage />}
           />
           <Route
             path='*'
