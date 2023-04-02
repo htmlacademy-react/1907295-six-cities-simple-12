@@ -2,6 +2,8 @@ import {Helmet} from 'react-helmet-async';
 import Header from '../../components/header/header';
 import ReviewCard from '../../components/card-review/card-review';
 // import {Offers} from '../../types/offers';
+// import {Reviews} from '../../types/review';
+
 // import {useParams} from 'react-router-dom';
 
 // type RoomPageProps = {
