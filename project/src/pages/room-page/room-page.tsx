@@ -1,18 +1,19 @@
 import {Helmet} from 'react-helmet-async';
 import Header from '../../components/header/header';
 import ReviewCard from '../../components/card-review/card-review';
-// import {Offers} from '../../types/offers';
-// import {Reviews} from '../../types/review';
+import {Offers} from '../../types/offers';
+import {Reviews} from '../../types/review';
 
-// import {useParams} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 
-// type RoomPageProps = {
-//   placesCard: Offers;
-// }
+type RoomPageProps = {
+  placesCard: Offers;
+  reviewCard: Reviews;
+}
 
-function RoomPage (): JSX.Element {
-  // const {id} = useParams();
-  // const roomId = placesCard.find((placesCard) => placesCard.id === Number(id));
+function RoomPage ({placesCard, reviewCard}: RoomPageProps): JSX.Element {
+  const {id} = useParams();
+  const roomId = placesCard.find((placesCard) => placesCard.id === Number(id));
 
   return (
     <>
