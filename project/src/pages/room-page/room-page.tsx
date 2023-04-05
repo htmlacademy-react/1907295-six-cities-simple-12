@@ -1,7 +1,20 @@
 import {Helmet} from 'react-helmet-async';
 import Header from '../../components/header/header';
+import ReviewCard from '../../components/card-review/card-review';
+import {Offers} from '../../types/offers';
+import {Reviews} from '../../types/review';
 
-function RoomPage (): JSX.Element {
+import {useParams} from 'react-router-dom';
+
+type RoomPageProps = {
+  placesCard: Offers;
+  reviewCard: Reviews;
+}
+
+function RoomPage ({placesCard, reviewCard}: RoomPageProps): JSX.Element {
+  const {id} = useParams();
+  const roomId = placesCard.find((placesCard) => placesCard.id === Number(id));
+
   return (
     <>
       <Header />
@@ -147,6 +160,7 @@ function RoomPage (): JSX.Element {
                     </div>
                   </li>
                 </ul>
+                <ReviewCard />
               </section>
             </div>
           </div>
