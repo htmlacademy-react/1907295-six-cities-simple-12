@@ -1,7 +1,14 @@
 import { Fragment, ChangeEvent, useState } from 'react';
-import { reviewCard } from '../../mocks/review';
 
-export default function ReviewCard (): JSX.Element {
+export default function ReviewForm (): JSX.Element {
+  const reviewFormCard = [
+    {value: 5, title: 'perfect', id: '5-stars'},
+    {value: 4, title: 'good', id: '4-stars'},
+    {value: 3, title: 'not bad', id: '3-stars'},
+    {value: 2, title: 'badly', id: '2-stars'},
+    {value: 1, title: 'terribly', id: '1-stars'}
+  ];
+
   const [formReview, setformReview] = useState({
     rating: '',
     review: ''
@@ -16,7 +23,7 @@ export default function ReviewCard (): JSX.Element {
     <form className="reviews__form form" action="#" method="post">
       <label className="reviews__label form__label" htmlFor="review">Your review</label>
       <div className="reviews__rating-form form__rating">
-        {reviewCard.map((item) => (
+        {reviewFormCard.map((item) => (
           <Fragment key={item.title}>
             <input
               className="form__rating-input visually-hidden"

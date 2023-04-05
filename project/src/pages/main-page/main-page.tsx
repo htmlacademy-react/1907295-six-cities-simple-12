@@ -6,10 +6,10 @@ import {Offers} from '../../types/offers';
 
 type MainPageProps = {
   placesCount: number;
-  placesCard: Offers;
+  offers: Offers;
 }
 
-function MainPage ({placesCount, placesCard}: MainPageProps): JSX.Element {
+function MainPage ({placesCount, offers}: MainPageProps): JSX.Element {
   return (
     <>
       <Header />
@@ -75,7 +75,7 @@ function MainPage ({placesCount, placesCard}: MainPageProps): JSX.Element {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-                <ListCard offers={placesCard} />
+                <ListCard offers={offers} />
               </div>
             </section>
             <div className="cities__right-section">

@@ -7,15 +7,16 @@ import RoomPage from '../../pages/room-page/room-page';
 import ErrorPage from '../../pages/error-page/error-page';
 import PrivateRoute from '../private-route/private-route';
 import {Offers} from '../../types/offers';
-import {Reviews} from '../../types/review';
+import {Reviews} from '../../types/reviews';
+
 
 type AppMainProps = {
   placesCount: number;
   placesCard: Offers;
-  reviewCard: Reviews;
+  placesReview: Reviews;
 }
 
-function App({placesCount, placesCard, reviewCard}: AppMainProps): JSX.Element {
+function App({placesCount, placesCard, placesReview}: AppMainProps): JSX.Element {
   return (
     <HelmetProvider>
       <BrowserRouter>
@@ -25,7 +26,7 @@ function App({placesCount, placesCard, reviewCard}: AppMainProps): JSX.Element {
             element={
               <MainPage
                 placesCount={placesCount}
-                placesCard={placesCard}
+                offers={placesCard}
               />
             }
           />
@@ -39,7 +40,7 @@ function App({placesCount, placesCard, reviewCard}: AppMainProps): JSX.Element {
           />
           <Route
             path={AppRoute.Room}
-            element={<RoomPage reviewCard={reviewCard} placesCard={placesCard}/>}
+            element={<RoomPage offers={placesCard} reviews={placesReview}/>}
           />
           <Route
             path='*'
