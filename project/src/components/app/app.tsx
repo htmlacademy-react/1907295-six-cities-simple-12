@@ -9,7 +9,6 @@ import PrivateRoute from '../private-route/private-route';
 import {Offers} from '../../types/offers';
 import {Reviews} from '../../types/reviews';
 
-
 type AppMainProps = {
   placesCount: number;
   placesCard: Offers;

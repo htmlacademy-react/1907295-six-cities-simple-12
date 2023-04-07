@@ -1,8 +1,10 @@
+// import {useState} from 'react';
 import {Helmet} from 'react-helmet-async';
 import {Link} from 'react-router-dom';
 import Header from '../../components/header/header';
 import ListCard from '../../components/card-list/card-list';
 import {Offers} from '../../types/offers';
+import Map from '../../components/map/map';
 
 type MainPageProps = {
   placesCount: number;
@@ -10,6 +12,15 @@ type MainPageProps = {
 }
 
 function MainPage ({placesCount, offers}: MainPageProps): JSX.Element {
+
+  // const [selectedOffer, setSelectedOffer] = useState<Offer | undefined>(
+  //   undefined
+  // );
+
+  // if(selectedOffer) {
+  //   setSelectedOffer(undefined);
+  // }
+
   return (
     <>
       <Header />
@@ -79,7 +90,8 @@ function MainPage ({placesCount, offers}: MainPageProps): JSX.Element {
               </div>
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map"></section>
+              {/* <Map offers={offers} selectedOffer={selectedOffer} /> */}
+              <Map offers={offers} />
             </div>
           </div>
         </div>
