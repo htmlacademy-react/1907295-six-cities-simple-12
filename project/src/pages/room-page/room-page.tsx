@@ -11,6 +11,8 @@ import FeaturesList from '../../components/card-room/card-features/card-features
 import RatingList from '../../components/card-room/card-rating/card-rating';
 import NameList from '../../components/card-room/card-name/card-name';
 import GalleryList from '../../components/card-room/card-gallery/card-gallery';
+import ListCard from '../../components/card-list/card-list';
+import Map from '../../components/map/map';
 
 type RoomPageProps = {
   offers: Offers;
@@ -46,8 +48,18 @@ export default function RoomPage ({offers, reviews}: RoomPageProps): JSX.Element
               <ReviewList reviews={reviews} />
             </div>
           </div>
-          <section className="property__map map"></section>
+          <section className="property__map map">
+            <Map offers={offers} place="property" />
+          </section>
         </section>
+        <div className="container">
+          <section className="near-places places">
+            <h2 className="near-places__title">Other places in the neighbourhood</h2>
+            <div className="near-places__list places__list">
+              <ListCard offers={offers} />
+            </div>
+          </section>
+        </div>
       </main>
     </>
   );
