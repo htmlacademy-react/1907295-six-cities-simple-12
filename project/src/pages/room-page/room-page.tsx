@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import {Helmet} from 'react-helmet-async';
 import {useParams} from 'react-router-dom';
 import {Offers, Offer} from '../../types/offers';
@@ -23,14 +22,6 @@ type RoomPageProps = {
 export default function RoomPage ({offers, reviews}: RoomPageProps): JSX.Element {
   const {id} = useParams();
   const offer = offers.find((item) => item.id === Number(id)) as Offer;
-
-  const [selectedOffer, setSelectedOffer] = useState<Offer | undefined>(
-    undefined
-  );
-
-  if(selectedOffer) {
-    setSelectedOffer(undefined);
-  }
 
   return (
     <>
@@ -57,7 +48,9 @@ export default function RoomPage ({offers, reviews}: RoomPageProps): JSX.Element
               <ReviewList reviews={reviews} />
             </div>
           </div>
-          <Map offers={offers} selectedOffer={selectedOffer} />
+          <section className="property__map map">
+            <Map offers={offers} place="property" />
+          </section>
         </section>
         <div className="container">
           <section className="near-places places">

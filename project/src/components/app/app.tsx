@@ -10,12 +10,11 @@ import {Offers} from '../../types/offers';
 import {Reviews} from '../../types/reviews';
 
 type AppMainProps = {
-  placesCount: number;
   placesCard: Offers;
   placesReview: Reviews;
 }
 
-function App({placesCount, placesCard, placesReview}: AppMainProps): JSX.Element {
+export default function App({placesCard, placesReview}: AppMainProps): JSX.Element {
   return (
     <HelmetProvider>
       <BrowserRouter>
@@ -23,10 +22,7 @@ function App({placesCount, placesCard, placesReview}: AppMainProps): JSX.Element
           <Route
             path={AppRoute.Main}
             element={
-              <MainPage
-                placesCount={placesCount}
-                offers={placesCard}
-              />
+              <MainPage />
             }
           />
           <Route
@@ -50,5 +46,3 @@ function App({placesCount, placesCard, placesReview}: AppMainProps): JSX.Element
     </HelmetProvider>
   );
 }
-
-export default App;
